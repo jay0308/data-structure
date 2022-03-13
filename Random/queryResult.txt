@@ -1,0 +1,113 @@
+"CREATE EXTERNAL TABLE `dwd_trd_aqc_trade_di`(\n"+
+"  `acquirement_id` string, \n"+
+"  `pre_acquirement_id` string, \n"+
+"  `merchant_id` string, \n"+
+"  `merchant_trans_id` string, \n"+
+"  `merchant_trans_type` string, \n"+
+"  `product_code` string, \n"+
+"  `buyer_user_id` string, \n"+
+"  `buyer_merchant_cust_id` string, \n"+
+"  `order_memo` string, \n"+
+"  `order_amt` bigint, \n"+
+"  `order_amt_cur` string, \n"+
+"  `terminal_type` string, \n"+
+"  `order_status` string, \n"+
+"  `created_time` string, \n"+
+"  `modified_time` string, \n"+
+"  `pay_id` string, \n"+
+"  `pay_amt` string, \n"+
+"  `pay_amt_cur` string, \n"+
+"  `pay_status` string, \n"+
+"  `asset_flux_id` string, \n"+
+"  `promo_code` string, \n"+
+"  `requesttype` string, \n"+
+"  `merchant_contract_id` string, \n"+
+"  `seller_user_id` string, \n"+
+"  `seller_merchant_cust_id` string, \n"+
+"  `acquire_mode` string, \n"+
+"  `extend_info` string, \n"+
+"  `is_clearinged` string, \n"+
+"  `clearinged_time` string, \n"+
+"  `is_addpay` string, \n"+
+"  `merc_unq_ref` string, \n"+
+"  `website` string, \n"+
+"  `theme` string, \n"+
+"  `ext_data` string, \n"+
+"  `paytm_user_id` string, \n"+
+"  `pos_id` string, \n"+
+"  `mode` string, \n"+
+"  `qr_code_id` string, \n"+
+"  `vpa` string, \n"+
+"  `cust_id` string, \n"+
+"  `email_id` string, \n"+
+"  `phone_no` string, \n"+
+"  `isedcrequest` string, \n"+
+"  `longitude` string, \n"+
+"  `latitude` string, \n"+
+"  `vpa_2` string, \n"+
+"  `cardscheme` string, \n"+
+"  `cardtype` string, \n"+
+"  `ext_data_isedcrequest` string, \n"+
+"  `offlineflow` string, \n"+
+"  `request_type` string, \n"+
+"  `paytmtid` string, \n"+
+"  `updated_dt` string, \n"+
+"  `pwp_category` string, \n"+
+"  `posid_v2` string, \n"+
+"  `usermobile` string, \n"+
+"  `imei` string, \n"+
+"  `brandinvoicenumber` string, \n"+
+"  `invoicenumber` string, \n"+
+"  `emiplanid` string, \n"+
+"  `emitotalamount` string, \n"+
+"  `brandemiamount` string, \n"+
+"  `productname` string, \n"+
+"  `emimonths` string, \n"+
+"  `brandname` string, \n"+
+"  `productid` string, \n"+
+"  `brandid` string, \n"+
+"  `paytmmerchantid` string, \n"+
+"  `categoryname` string, \n"+
+"  `askucode` string, \n"+
+"  `maskedcardno` string, \n"+
+"  `bankoffer_amount` string, \n"+
+"  `bankoffer_type` string, \n"+
+"  `emiinterestrate` string, \n"+
+"  `terminaladdress` string, \n"+
+"  `emitype` string, \n"+
+"  `brandvalidationenabled` string, \n"+
+"  `categoryid` string, \n"+
+"  `offeramount` string, \n"+
+"  `issubventioncreated` string, \n"+
+"  `isbankofferapplied` string, \n"+
+"  `isstandardbrandemi` string, \n"+
+"  `bankoffer_message` string, \n"+
+"  `operatortype` string, \n"+
+"  `cardholdername` string, \n"+
+"  `networktype` string, \n"+
+"  `updated_at` string, \n"+
+"  `split_field_dl_last_updated` date, \n"+
+"  `skucode` string, \n"+
+"  `deviceserialno` string, \n"+
+"  `clientiid` string, \n"+
+"  `issuingbankname` string)\n"+
+"PARTITIONED BY ( \n"+
+"  `dl_last_updated` string)\n"+
+"ROW FORMAT SERDE \n"+
+"  'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe' \n"+
+"STORED AS INPUTFORMAT \n"+
+"  'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat' \n"+
+"OUTPUTFORMAT \n"+
+"  'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'\n"+
+"LOCATION\n"+
+"  's3://daas-computed-datasets-prod/snapshots/pgdwh/dwd_trd_aqc_trade_di/'\n"+
+"TBLPROPERTIES (\n"+
+"  'CrawlerSchemaDeserializerVersion'='1.0', \n"+
+"  'CrawlerSchemaSerializerVersion'='1.0', \n"+
+"  'averageRecordSize'='2393', \n"+
+"  'classification'='parquet', \n"+
+"  'compressionType'='none', \n"+
+"  'objectCount'='26137', \n"+
+"  'recordCount'='2188588548', \n"+
+"  'sizeKey'='1523348187428', \n"+
+"  'typeOfData'='file')\n"+
